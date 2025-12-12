@@ -1,0 +1,89 @@
+.card {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+    border: solid white;
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+}
+
+.info h2 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+}
+
+.info p {
+    margin: 1px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background: white;
+    border-radius: 12px;
+    width: 700px;
+    height: 150px;
+    border: 1px solid #ddd;
+}
+
+.bot1 {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.bot2 {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: none;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.bot3 {
+    background: rgb(120, 232, 120);
+    border-radius: 5px;
+    border: none;
+
+}
+
+.bottom {
+    display: flex;
+    align-content: end;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.bot4 {
+    background: rgb(36, 67, 242);
+    color: white;
+    font-size: 15px;
+    width: 600px;
+    border-radius: 5px;
+    border: none;
+}
+
+input {
+    width: 600px;
+}
+.contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuerpo {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
