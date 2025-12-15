@@ -15,9 +15,7 @@ export const Contactos = () => {
   fetch("https://playground.4geeks.com/contact/agendas/Radamis/contacts")
     .then(res => res.json())
     .then(data => {
-      console.log("API:", data); 
-      console.log("contacts:", data.contacts);
-      dispatch({
+        dispatch({
         type: "setContactos",
         payload: data.contacts
       });

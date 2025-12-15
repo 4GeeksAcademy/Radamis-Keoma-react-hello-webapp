@@ -1,13 +1,12 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
-import Cuadro from "../components/Inputs.jsx";
-import { Save } from "../components/Button.jsx";
+import Cuadro from "../components/InputEditar.jsx";
+import { SaveDos } from "../components/Button.jsx";
 import { Link } from "react-router-dom";
 
-export const Formulario = () => {
+export const EditarContacto = () => {
 
 	const { store, dispatch } = useGlobalReducer()
 	
-
 	return (
 		<div>
 			<div>
@@ -15,10 +14,9 @@ export const Formulario = () => {
 				
 			</div>
 			<footer className="footer mt-auto py-3 text-center">
-				<Save />
+				<SaveDos />
 				<Link to="/">or get back to contact</Link>
 			</footer>
-			
 		</div>
 	);
 }; 

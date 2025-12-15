@@ -7,25 +7,14 @@ export const initialStore = () => {
     phone: '',
     address: '',
 
-    message: null,
-    todos: [
-      {
-        id: 1,
-        title: "Make the bed",
-        background: null,
-      },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
-      }
-    ],
-    saludoEnIngles: true,
+    
   }
 }
 
 export default function storeReducer(store, action = {}) {
   switch (action.type) {
+    case "limpiarForm":
+      return { ...store, nombre: '', phone: '', email: '', address: '' }
     case "setNombre":
       return { ...store, nombre: action.payload };
 
@@ -52,19 +41,8 @@ export default function storeReducer(store, action = {}) {
         address: store.address,
       };
 
-     
-
       return store;
     }
-
-    case 'add_task':
-
-      const { id, color } = action.payload
-
-      return {
-        ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
-      };
 
     case 'addContacto': {
       const nuevoContacto = {
@@ -93,17 +71,15 @@ export default function storeReducer(store, action = {}) {
       };
 
     case "selectContacto":
-      return {
-        ...store,
-        contactoSeleccionado: action.payload
-      };
+  return {
+    ...store,
+    contactos: action.payload,
+    nombre: action.payload.nombre,
+    phone: action.payload.phone,
+    email: action.payload.email,
+    address: action.payload.address
+  };
 
-    case 'saludo':
-
-      return {
-        ...store,
-        saludoEnIngles: !store.saludoEnIngles
-      }
     default:
       throw Error('Unknown action.');
   }

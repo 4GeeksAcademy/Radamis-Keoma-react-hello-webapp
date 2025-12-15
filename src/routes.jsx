@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import { Formulario } from "./pages/Formulario";
-import { Single } from "./pages/Single";
+import { EditarContacto } from "./pages/EditarContacto";
 import { Contactos } from "./pages/Contactos";
 
 export const router = createBrowserRouter(
@@ -23,7 +23,7 @@ export const router = createBrowserRouter(
 
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
         <Route path= "/" element={<Contactos />} />
-        <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
+        <Route path="/EditarContacto/:theId" element={ <EditarContacto />} />  {/* Dynamic route for single items */}
         <Route path="/formulario" element={<Formulario />} />
       </Route>
     )
