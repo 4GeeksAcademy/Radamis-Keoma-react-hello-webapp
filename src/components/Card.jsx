@@ -6,7 +6,7 @@ import useGlobalReducer from "../hooks/useGlobalReducer.jsx"
 export default function Card({ id, name, address, phone, email }) {
 
     const { store, dispatch } = useGlobalReducer()
-    const navigate = useNavigate ()
+    const navigate = useNavigate()
 
     // Função para eliminar contato usando o store
     const eliminarContacto = async () => {
@@ -47,31 +47,28 @@ export default function Card({ id, name, address, phone, email }) {
     }
 
     return (
-        <div className="card container d-flex align-items-center p-3 my-2 shadow-sm">
-
-
-            <img
+        <div className="card">
+        <div className="container">
+            <img className="foto"
                 src="https://static.vecteezy.com/ti/vetor-gratis/t2/7296445-login-head-sign-icon-design-monochrome-icon-people-icon-design-vetor.jpg"
-                className="foto"
                 alt="Foto do contato"
             />
-
-            <div className="info ms-3 flex-grow-1">
-                <h2>{name}</h2>
-                <p>{address}</p>
-                <p>{phone}</p>
-                <p>{email}</p>
-            </div>
-
-            <div className="d-flex flex-column gap-2">
-                <div onClick={()=> {navigate(`/EditarContacto/${id}`)}}>
-                    <BotonEditar />
+                <div className="info">
+                    <h2>{name}</h2>
+                    <p>{address}</p>
+                    <p>{phone}</p>
+                    <p>{email}</p>
                 </div>
-                <div onClick={eliminarContacto}>
-                    <BotonEliminar />
-                </div>
-            </div>
 
+                <div>
+                    <div onClick={() => { navigate(`/EditarContacto/${id}`) }}>
+                        <BotonEditar />
+                    </div>
+                    <div onClick={eliminarContacto}>
+                        <BotonEliminar />
+                    </div>
+                </div>
+        </div>
         </div>
     )
 }

@@ -27,7 +27,7 @@ export const Contactos = () => {
     <div>
       <AddContact />
 
-      <ul className="list-group">
+      <ul className="contacts">
 
         {store.contactos && store.contactos.length > 0 ? (
           store.contactos.map((contacto) => (
